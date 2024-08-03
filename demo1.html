@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Book Us Start -->
+    <div class="container-fluid contact py-6">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-1">
+                    <img src="img/im2.jpeg" class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+                <div class="col-10">
+                    <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                        <div class="text-center">
+                            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
+                            <h1 class="display-5 mb-5">Where you want Our Services</h1>
+                        </div>
+                        <div class="row g-4 form">
+                            <div class="col-lg-4 col-md-6">
+                                <select id="country" class="form-select border-primary p-2">
+                                    <option selected>Select Country</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UK">UK</option>
+                                    <option value="India">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select id="city" class="form-select border-primary p-2">
+                                    <option selected>Select City</option>
+                                    <option value="Dependent">Depend On Country</option>
+                                    <option value="UK">UK</option>
+                                    <option value="India">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select id="palace" class="form-select border-primary p-2">
+                                    <option selected>Select Palace</option>
+                                    <option value="Dependent">Depend On Country</option>
+                                    <option value="UK">UK</option>
+                                    <option value="India">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select id="eventType" class="form-select border-primary p-2">
+                                    <option selected>Small Event</option>
+                                    <option value="Event Type">Event Type</option>
+                                    <option value="Big Event">Big Event</option>
+                                    <option value="Small Event">Small Event</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select id="people" class="form-select border-primary p-2">
+                                    <option selected>No. Of People</option>
+                                    <option value="100-200">100-200</option>
+                                    <option value="300-400">300-400</option>
+                                    <option value="500-600">500-600</option>
+                                    <option value="700-800">700-800</option>
+                                    <option value="900-1000">900-1000</option>
+                                    <option value="1000+">1000+</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <select id="food" class="form-select border-primary p-2">
+                                    <option selected>Vegetarian</option>
+                                    <option value="Vegetarian">Vegetarian</option>
+                                    <option value="Non Vegetarian">Non Vegetarian</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="text" id="contact" class="form-control border-primary p-2" placeholder="Your Contact No.">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="date" id="date" class="form-control border-primary p-2" placeholder="Select Date">
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <input type="email" id="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <img src="img/background-site.jpg" class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Book Us End -->
+
+    <script>
+        function sendWhatsAppMessage() {
+            // Collect form data
+            var country = document.getElementById('country').value;
+            var city = document.getElementById('city').value;
+            var palace = document.getElementById('palace').value;
+            var eventType = document.getElementById('eventType').value;
+            var people = document.getElementById('people').value;
+            var food = document.getElementById('food').value;
+            var contact = document.getElementById('contact').value;
+            var date = document.getElementById('date').value;
+            var email = document.getElementById('email').value;
+
+            // Debugging: Log values to the console
+            console.log("Country: " + country);
+            console.log("City: " + city);
+            console.log("Palace: " + palace);
+            console.log("Event Type: " + eventType);
+            console.log("People: " + people);
+            console.log("Food: " + food);
+            console.log("Contact: " + contact);
+            console.log("Date: " + date);
+            console.log("Email: " + email);
+
+            // Ensure all fields are filled
+            if (!country || !city || !palace || !eventType || !people || !food || !contact || !date || !email) {
+                alert("Please fill in all the fields.");
+                return;
+            }
+
+            // Construct the WhatsApp message
+            var message = "Booking Details\n"
+                        + "Country: " + country + "\n"
+                        + "City: " + city + "\n"
+                        + "Palace: " + palace + "\n"
+                        + "Event Type: " + eventType + "\n"
+                        + "People: " + people + "\n"
+                        + "Food: " + food + "\n"
+                        + "Contact: " + contact + "\n"
+                        + "Date: " + date + "\n"
+                        + "Email: " + email;
+
+            // WhatsApp API URL
+            var whatsappURL = `https://wa.me/917038570978?text=${encodeURIComponent(message)}`;
+
+            // Debugging: Log the WhatsApp URL
+            console.log("WhatsApp URL: " + whatsappURL);
+
+            // Open the WhatsApp URL
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+
+
+
+<!-- 
+pehele vala script  -->
+
+<!-- <script>
+    // Function to prepare WhatsApp message
+    function sendWhatsAppMessage() { 
+       // Collect form data
+       var country = document.getElementById('country').value;
+            var city = document.getElementById('city').value;
+            var palace = document.getElementById('palace').value;
+            var eventType = document.getElementById('eventType').value;
+            var people = document.getElementById('people').value;
+            var food = document.getElementById('food').value;
+            var contact = document.getElementById('contact').value;
+            var date = document.getElementById('date').value;
+            var email = document.getElementById('email').value;
+
+        // Construct WhatsApp message
+                     var message = "Booking Details"
+                        + "\nCountry: " + country 
+                        + "\nCity: " + city 
+                        + "\nPalace: " + palace
+                        + "\nEvent Type: " + eventType
+                        + "\nPeople: " + people
+                        + "\nFood: " + food
+                        + "\nContact: " + contact
+                        + "\nDate: " + date
+                        + "\nEmail: " + email;
+    
+        // Construct the WhatsApp URL
+        var whatsapp_url = "https://wa.me/917038570978?text=" + encodeURIComponent(message);
+
+        // Open the WhatsApp chat window
+        window.open(whatsapp_url, '_blank');
+    }     
+
+</script> -->
+</body>
+</html>

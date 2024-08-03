@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-success">Zay Shop</h5>
+          <ul class="list-unstyled">
+            <li><i class="fa fa-map-marker"></i> 123 Consectetur at ligula 10660</li>
+            <li><i class="fa fa-phone"></i> 010-020-0340</li>
+            <li><i class="fa fa-envelope"></i> info@company.com</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Products</h5>
+          <ul class="list-unstyled">
+            <li>Luxury</li>
+            <li>Sport Wear</li>
+            <li>Men's Shoes</li>
+            <li>Women's Shoes</li>
+            <li>Popular Dress</li>
+            <li>Gym Accessories</li>
+            <li>Sport Shoes</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Further Info</h5>
+          <ul class="list-unstyled">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Shop Locations</li>
+            <li>FAQs</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <p>Copyright © 2021 Company Name | Designed by <a href="#" class="text-success">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

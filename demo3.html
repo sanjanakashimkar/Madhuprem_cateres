@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <a href="contact.html" id="bookNowButton" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill bk">Book Now</a>
+
+    </head>
+    <script>
+        // Define the phone number and message you want to send
+const phoneNumber = '7038570978'; // Replace with your WhatsApp phone number
+const message = 'Hello, I would like to book an appointment.'; // Customize your message
+
+// Construct the WhatsApp URL
+const whatsappUrl = `https://api.whatsapp.com/send?phone=${7038570978}&text=${encodeURIComponent(message)}`;
+
+// Get the Book Now button
+const bookNowButton = document.getElementById('bookNowButton');
+
+// Set the href attribute to the WhatsApp URL
+bookNowButton.setAttribute('href', whatsappUrl);
+
+    </script>
+</html>

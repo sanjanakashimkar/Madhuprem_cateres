@@ -1,0 +1,40 @@
+<div class="container-fluid contact py-6 wow bounceInUp abw4" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="p-5 bg-light rounded contact-form">
+            <div class="row g-4">
+                <div class="col-12">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Get in touch</small>
+                    <h1 class="display-5 mb-0">Contact Us For Any Queries!</h1>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <p class="mb-4">We're here to help with all your catering needs. Reach out to us for menu options, pricing details, or to discuss your event requirements. Our team is ready to assist you in creating a memorable culinary experience. Contact us today and let's start planning! <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <form id="contact-form">
+                        <input type="text" id="name" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name" required>
+                        <input type="email" id="email" class="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Enter Your Email" required>
+                        <textarea id="message" class="w-100 form-control mb-4 p-3 border-primary bg-light" rows="4" cols="10" placeholder="Your Message" required></textarea>
+                        <button type="submit" id="submit-btn" class="w-100 btn btn-primary form-control p-3 border-primary bg-primary rounded-pill">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the form data
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Construct the WhatsApp URL
+    var whatsappNumber = '+917038570978'; // Replace with your WhatsApp number
+    var whatsappURL = 'https://wa.me/' +917038570978 + '?text=' 
+        + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+
+    // Open the WhatsApp URL
+    window.open(whatsappURL, '_blank');
+});
+</script>
